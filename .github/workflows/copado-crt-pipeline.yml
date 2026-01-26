@@ -13,19 +13,20 @@ jobs:
   run-crt-tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository 
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-       - name: Set up Java
-         uses: actions/setup-java@v4
-         with:
-            distribution: temurin
-            java-version: '11'
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '11'
+       - name: verify java version
+         run: java -version
 
-        - name: verify java version
-          run: java -version
-
-        - name: run copado crt tests
-          run:  |
-             echo "running copadptests..."
-             mvn test
+        - name: Run Copado CRT Tests
+          Run:  |
+            echo "running Copado CRT tests..."
+            mvn test
+  
+        
