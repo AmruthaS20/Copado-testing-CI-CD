@@ -1,0 +1,34 @@
+name: Copado CRT Pipeline
+
+on:
+
+  push:
+  branches:
+    - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+    run-crt-tests:
+      runs-on: ubuntu-latest
+
+steps:
+          -name: Checkout repostlury 
+          uses: actions/checkout@v4
+
+          -name: Set up Java
+          uses: actions/setup-java@v4
+          with:
+            distribution: 'temurin'
+            java-version: '11'
+
+          -name: Verify Java version
+          run: java -version
+
+        -name: Run Copado CRT Tests 
+          run:|
+            echo "Running Copado Tests..."
+              mvn test
+ 
