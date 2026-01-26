@@ -1,7 +1,7 @@
 name: Copado CRT Pipeline
 
 on:
-   Workflow_Dispatch:
+   workflow_dispatch:
    push:
      branches:
        - main
