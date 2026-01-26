@@ -27,8 +27,8 @@ steps:
           -name: Verify Java version
           run: java -version
 
-        -name: Run Copado CRT Tests 
-          run:|
-            echo "Running Copado Tests..."
-              mvn test
+          -name: Run Copado CRT Tests
+          run: |
+               echo "Running Copado Tests..."
+               mvn test
  
