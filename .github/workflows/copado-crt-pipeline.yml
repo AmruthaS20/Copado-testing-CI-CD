@@ -7,7 +7,7 @@ on:
       - main
   pull_request:
     branches:
-      - main
+      -main
 
 jobs:
   run-crt-tests:
@@ -16,17 +16,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Java
+      - name: set up Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '11'
-       - name: verify java version
-         run: java -version
 
-        - name: Run Copado CRT Tests
-          Run:  |
-            echo "running Copado CRT tests..."
-            mvn test
+      - name: verify java version
+        run: java -version
+
+      - name: Run Copado CRT tests
+        run: |
+          echo "running copado CRT tests..."
+          mvn test
   
-        
