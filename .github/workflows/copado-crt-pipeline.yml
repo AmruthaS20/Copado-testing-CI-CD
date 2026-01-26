@@ -1,20 +1,19 @@
 name: Copado CRT Pipeline
 
 on:
-
-  push:
-  branches:
-    - main
+   Workflow_Dispatch:
+   push:
+     branches:
+       - main
   pull_request:
     branches:
       - main
 
 jobs:
-
     run-crt-tests:
       runs-on: ubuntu-latest
 
-steps:
+      steps:
           -name: Checkout repostlury 
           uses: actions/checkout@v4
 
