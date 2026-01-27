@@ -28,6 +28,6 @@ jobs:
       - name: Run Copado CRT tests
         run: |
           pwd
-          Is -R
+          ls -R
  
 
