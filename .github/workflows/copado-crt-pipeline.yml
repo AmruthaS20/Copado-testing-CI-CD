@@ -28,5 +28,6 @@ jobs:
       - name: Run Copado CRT tests
         run: |
          pip install robotframework
-         robot-outputdir results crt/tests
+         robot --outputdir results crt/tests
+ 
 
