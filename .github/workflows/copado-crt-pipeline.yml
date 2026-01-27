@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Copado CRT tests
         run: |
-          ped
+          pwd
           Is -R
  
 
