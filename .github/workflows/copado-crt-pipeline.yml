@@ -38,7 +38,7 @@ jobs:
 
       - name: run copado tests
         run: |
-          rpbot tests/crt_validation.robot
+          robot tests/crt_validation.robot
            
       - name: upload CRT testresults
         if: always()
