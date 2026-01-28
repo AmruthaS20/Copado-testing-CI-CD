@@ -25,10 +25,16 @@ jobs:
       - name: verify java version
         run: java -version
 
-      - name: Run Copado CRT tests
+      - name: install copado crt dependencies
         run: |
            pip install robotframework
-           robot --outputdir results tests
+           pp install robotframework-qweb
+           pip install copado-robotic-testing
+
+      - name: run copado tests
+        run: |
+          rpbot tests/crt_validation.robot
+           
       - name: upload CRT testresults
         if: always()
         uses: actions/upload-artifact@v4
