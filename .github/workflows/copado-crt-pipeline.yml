@@ -33,8 +33,7 @@ jobs:
       - name: install copado crt dependencies
         run: |
            python -m pip install --upgrade pip
-           python -m pip install robotframework==6.1.1
-           python -m pip install robotframework-qweb==2.0.0
+           python -m pip install robotframework
            python -m pip install copado-robotic-testing
 
       - name: run copado tests
