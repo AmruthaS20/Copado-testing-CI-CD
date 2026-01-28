@@ -10,10 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: copado/robotic-testing:latest
+      image: python:3.10-slim
 
     steps:
-      - uses: actions/checkout@v4
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: install robot framework
+        run: |
+          pip instaall --upgrade pip
+          pip install robotframework
       
       - name: run crt tests
         run: |
