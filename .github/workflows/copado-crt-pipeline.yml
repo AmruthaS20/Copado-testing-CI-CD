@@ -28,7 +28,7 @@ jobs:
       - name: install copado crt dependencies
         run: |
            pip install robotframework
-           pp install robotframework-qweb
+           pip install robotframework-qweb
            pip install copado-robotic-testing
 
       - name: run copado tests
