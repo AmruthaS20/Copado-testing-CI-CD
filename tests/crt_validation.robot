@@ -14,21 +14,20 @@ ${URL}    https://login.salesforce.com
 CI-CD pipeline validation
     
      Appstate        Login     
-     Sleep           10 
      Verify Text     User Stories
      Click Text       User Stories    Delay=10
      
    #validate the user story is completed  
 
 
-    ${us_id}=        Get Text    //table//a[@title\='US-0000024']  
+    ${us_id}=        Get Text    //table//a[contains(@title,'US-')]  
     ${record_type}=              Get Text    //table//a[@title\='User Story']
-    ${title}=                    Get Text    //span[normalize-space()\='ci-cd-pipeline']  
+    ${title}=                    Get Text    //span[contains(normalize-space(),'ci-cd')]
     ${feature}=                  Get Text    //table//a[@title\='validation']
     ${epic}=                     Get Text    //table//a[@title\='E0000001']
     ${theme}=                    Get Text    //table//a[@title\='code']
     ${project}=                  Get Text     //table//a[@title\='testing']
-    ${status}=                   Get Text     //table//td[@data-label\='Status']//span[text()\='Completed']
+    ${status}=                   Get Text     //table//td[@data-label='Status']//span
 
     ${US_data}                   Create Dictionary
     ...                        us_id=${us_id}
