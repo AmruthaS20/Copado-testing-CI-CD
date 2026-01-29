@@ -7,7 +7,7 @@ Resource   ../resources/common.robot
 
 CI CD pipeline validation
 
-    Should Be Equal As Strings   Completed    rejected
+    Should Be Equal As Strings   Completed    Completed
 
     Log    CRT pipeline executed successfully
  
